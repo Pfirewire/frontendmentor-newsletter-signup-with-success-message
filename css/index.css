@@ -149,6 +149,7 @@ button {
     height: 100vh;
     width: 100vw;
     z-index: 12;
+    background-color: rgba(0,0,0,0.4);
 }
 
 .modal-card {
@@ -158,7 +159,6 @@ button {
     flex-direction: column;
     padding: 2rem;
     border-radius: 20px;
-    box-shadow: 0 0 10px var(--grey);
 }
 
 .modal-checkmark {

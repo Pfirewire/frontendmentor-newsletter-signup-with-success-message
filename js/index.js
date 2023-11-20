@@ -16,12 +16,11 @@
     // Functions
 
     const emailValidated = () => {
-        const matchArray = String(formInput.value)
+        return String(formInput.value)
             .toLowerCase()
             .match(
                 /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
             );
-        return matchArray !== null;
     };
     const invalidEmail = () => {
         invalidText.style.display = 'block';
@@ -41,6 +40,7 @@
         if(emailValidated()) {
             validEmail();
             emailSpan.innerText = formInput.value;
+            formInput.value = '';
             modal.style.display = 'flex';
             pageWrapper.style.filter = 'blur(5px)';
         } else {
