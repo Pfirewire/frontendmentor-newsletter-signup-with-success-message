@@ -28,6 +28,7 @@ body {
 
 .signup-form {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     gap: 4rem;
@@ -103,7 +104,7 @@ form p {
 
 form label, form p {
     font-weight: bolder;
-    font-size: x-small;
+    font-size: small;
 }
 
 form input {
@@ -177,13 +178,60 @@ button {
     font-weight: bold;
 }
 
-@media (max-width: 375px) {
-
-}
-
 .attribution {
     font-size: 11px; text-align: center;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 375px) {
+    .signup-form {
+        padding: 0;
+        gap: 0;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .desktop-art {
+        display: none;
+    }
+
+    .mobile-art {
+        display: block;
+        width: 375px;
+        height: 284px;
+        background: url("../assets/images/illustration-sign-up-mobile.svg");
+    }
+
+    .form-body {
+        padding: 0 2rem 3rem 2rem;
+    }
+
+    .form-header h1 {
+        font-size: 45px;
+    }
+
+    form {
+        margin-top: 3rem;
+    }
+
+    .modal-card {
+        height: 100vh;
+        width: 100vw;
+        border-radius: 0;
+        padding-top: 10rem;
+    }
+
+    .modal button {
+        position: absolute;
+        bottom: 2rem;
+        width: calc(100% - 6rem);
+    }
+
+    .attribution {
+        display: none;
+    }
 }
