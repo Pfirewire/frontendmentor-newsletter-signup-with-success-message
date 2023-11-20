@@ -15,10 +15,64 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: var(--charcoal-grey);
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+}
+
+.signup-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    background-color: var(--white);
+    padding: 1.25rem;
+    border-radius: 36px;
+}
+
+.form-body {
+    padding: 2rem;
+    width: 400px;
+}
+
+.form-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.form-header h1 {
+    color: var(--dark-slate-grey);
+    margin: 1rem 0;
+    font-size: 50px;
+}
+
+.list-item {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.list-item li {
+    all: unset;
+}
+
+.list-item p {
+    margin: .25rem 0;
 }
 
 
 
+.mobile-art {
+    display: none;
+}
 
 
 @media (max-width: 375px) {
