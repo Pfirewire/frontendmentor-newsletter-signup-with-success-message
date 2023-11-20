@@ -36,7 +36,7 @@ body {
 }
 
 .form-body {
-    padding: 2rem;
+    padding: 2rem 0 2rem 2rem;
     width: 400px;
 }
 
@@ -49,8 +49,12 @@ body {
 
 .form-header h1 {
     color: var(--dark-slate-grey);
-    margin: 1rem 0;
-    font-size: 50px;
+    margin: 0.75rem 0;
+    font-size: 56px;
+}
+
+.form-header p {
+    margin-bottom: 2rem;
 }
 
 .list-item {
@@ -60,15 +64,60 @@ body {
     gap: 1rem;
 }
 
-.list-item li {
+.list-item li, ul {
     all: unset;
+}
+
+.form-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .list-item p {
     margin: .25rem 0;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: 2rem;
+}
 
+form label {
+    color: var(--dark-slate-grey);
+    font-weight: bolder;
+    font-size: x-small;
+}
+
+form input {
+    all: unset;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--grey);
+    border-radius: 7px;
+
+    &:focus {
+        border: 1px solid var(--dark-slate-grey);
+    }
+}
+
+form button {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-slate-grey);
+    color: var(--white);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 7px;
+
+    &:hover {
+        background-image: linear-gradient(to right, #FD3766, #FD522E);
+        cursor: pointer;
+    }
+}
 
 .mobile-art {
     display: none;
